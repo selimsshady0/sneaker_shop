@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneaker_shop/constants.dart';
+import 'package:sneaker_shop/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -45,17 +46,25 @@ class IntroPage extends StatelessWidget {
             ),
 
             // Shop Now Button
-            Container(
-              width: double.infinity,
-              height: 66,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(16),
+            GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomePage(),
+                ),
               ),
-              child: const Center(
-                child: Text(
-                  "Shop Now",
-                  style: kIntroButton,
+              child: Container(
+                width: double.infinity,
+                height: 66,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: const Center(
+                  child: Text(
+                    "Shop Now",
+                    style: kIntroButton,
+                  ),
                 ),
               ),
             ),
