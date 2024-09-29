@@ -15,3 +15,9 @@ const TextStyle kIntroButton = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.bold,
 );
+
+const TextStyle kDrawerText = TextStyle(
+  color: Colors.white,
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+);
