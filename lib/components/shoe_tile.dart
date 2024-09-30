@@ -22,9 +22,12 @@ class ShoeTile extends StatelessWidget {
           Image.asset(shoe.imagePath),
 
           // description
-          Text(
-            shoe.description,
-            style: kShoeDescription,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 26),
+            child: Text(
+              shoe.description,
+              style: kShoeDescription,
+            ),
           ),
 
           // price + details
@@ -65,8 +68,6 @@ class ShoeTile extends StatelessWidget {
               ],
             ),
           ),
-
-          // button to add to cart
         ],
       ),
     );
