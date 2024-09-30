@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sneaker_shop/components/shoe_tile.dart';
 import 'package:sneaker_shop/constants.dart';
+import 'package:sneaker_shop/models/shoe.dart';
 
 class ShopPage extends StatelessWidget {
   const ShopPage({super.key});
@@ -46,9 +48,46 @@ class ShopPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Hot Picks 🔥", style: kHotPicks,),
-              Text("See all", style: kSeeAll,),
+              Text(
+                "Hot Picks 🔥",
+                style: kHotPicks,
+              ),
+              Text(
+                "See all",
+                style: kSeeAll,
+              ),
             ],
+          ),
+        ),
+
+        const SizedBox(
+          height: 20,
+        ),
+
+        Expanded(
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 4,
+            itemBuilder: (context, index) {
+              // create a shoe
+              Shoe shoe = Shoe(
+                  name: "Air Jordan",
+                  price: "240",
+                  imagePath: "lib/images/shoe_1.png",
+                  description: "cool shoe");
+              return ShoeTile(shoe: shoe);
+            },
+          ),
+        ),
+
+        const Padding(
+          padding: EdgeInsets.only(
+            top: 25,
+            left: 25,
+            right: 25,
+          ),
+          child: Divider(
+            color: Colors.white,
           ),
         ),
       ],

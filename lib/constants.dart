@@ -36,3 +36,16 @@ const TextStyle kSeeAll = TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.blue,
 );
+
+TextStyle kShoeDescription = TextStyle(
+  color: Colors.grey[600],
+);
+
+const TextStyle kShoeName = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 20,
+);
+
+const TextStyle kShoePrice = TextStyle(
+  color: Colors.grey,
+);
