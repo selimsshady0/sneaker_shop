@@ -21,3 +21,18 @@ const TextStyle kDrawerText = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.bold,
 );
+
+const TextStyle kSearchText = TextStyle(
+  color: Colors.grey,
+  fontSize: 16,
+);
+
+const TextStyle kHotPicks = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 24,
+);
+
+const TextStyle kSeeAll = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: Colors.blue,
+);

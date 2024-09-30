@@ -5,6 +5,9 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Text("Cart Page"),);
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: const Text("Cart Page"),
+    );
   }
 }
