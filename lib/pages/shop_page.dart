@@ -5,8 +5,27 @@ import 'package:sneaker_shop/constants.dart';
 import 'package:sneaker_shop/models/cart.dart';
 import 'package:sneaker_shop/models/shoe.dart';
 
-class ShopPage extends StatelessWidget {
+class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
+
+  @override
+  State<ShopPage> createState() => _ShopPageState();
+}
+
+class _ShopPageState extends State<ShopPage> {
+  // add shoe to cart
+  void addShoeToCart(Shoe shoe) {
+    Provider.of<Cart>(context, listen: false).addItemToCart(shoe);
+
+    // alert the user, shoe successfully added
+    showDialog(
+      context: context,
+      builder: (context) => const AlertDialog(
+        title: Text("Succsesfully added!"),
+        content: Text("Check your cart"),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +93,10 @@ class ShopPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 // get a shoe from shop list
                 Shoe shoe = value.getShoeList()[index];
-                return ShoeTile(shoe: shoe);
+                return ShoeTile(
+                  shoe: shoe,
+                  onTap: () => addShoeToCart(shoe),
+                );
               },
             ),
           ),

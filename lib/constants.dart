@@ -49,3 +49,8 @@ const TextStyle kShoeName = TextStyle(
 const TextStyle kShoePrice = TextStyle(
   color: Colors.grey,
 );
+
+const TextStyle kCartHeader = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 24,
+);
